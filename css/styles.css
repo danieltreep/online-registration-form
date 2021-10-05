@@ -39,6 +39,9 @@ legend {
 main {
     margin: 0 1rem;
 }
+form {
+    background-color: rgba(252, 245, 235, 0.288);
+}
 fieldset {
     border: none;
     padding: 1rem 0;
@@ -62,6 +65,7 @@ p {
 .form-section {
     border-top: 2px solid rgb(52, 63, 78);
     margin-top: 3px;
+    
 }
 .intro {
     color: rgb(177, 177, 177);
@@ -71,7 +75,7 @@ p {
 .input, 
 .zip{
     padding: 1rem;
-    background-color: rgba(230, 230, 230, 0.658);
+    background-color: rgba(238, 238, 238, 0.658);
     border: none;
     border-radius: 5px;
     margin-bottom: .3rem;
@@ -81,6 +85,8 @@ p {
 }
 .input:focus {
     outline-color: darkblue;
+    background: white;
+    transition: .3s;
 }
 .textarea {
     height: 125px;
@@ -100,14 +106,40 @@ p {
     text-align: right;
     font-style: italic;
  }
+ textarea::-webkit-input-placeholder {
+    text-align: left;
+    font-style: italic;
+ }
  .footer {
     padding: 1rem 0 0;
     margin: 1rem;
     color: rgb(177, 177, 177);
  }
+ 
 
  /* Media Queries */
 
- @media screen (min-width: 768px) {
-     
+ @media screen and (min-width: 768px) {
+    main {
+         max-width: 750px;
+         margin: 0 auto;
+    }
+    .fieldset-1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    } 
+    .input {
+        width: 75%;
+        margin: .5rem 0;
+    }
+    .label {
+        width: 25%;
+        margin: 1rem 0;
+    }
+    .zip {
+        width: 25%;
+     }
+     .textarea {
+         width: 100%;
+     }
  }
